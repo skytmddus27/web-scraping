@@ -1,0 +1,158 @@
+웹 프로그밍
+2웹 프로그래밍의 이해
+ HTTP(S) HTTP(S) 프로토콜로 통신하는 , 클라이언트와 서버를 개발
+ 웹 클라이언트와 웹 서버를 같이 개발 및 웹 클라이언트 또는 웹 서버 하 나만 개발
+ 웹 서버를 개발하는 경우가 많아서 파이썬 웹 프로그래밍이라고 하면 우 선적으로 장고 Django Django DjangoDjango와 같은 웹 프레임워크를 사용하여 웹 서버를 개발 웹 프로그래밍의 이해
+3웹 프로그래밍의 이해
+ HTTP(S) HTTP(S) 프로토콜로 통신하는 , 클라이언트와 서버를 개발 웹 프로그래밍의 이해
+4
+웹 브라우저를 사용하여 요청
+ 브라우저는 주소창에 입력된 문장을 해석하여 웹 서버에게 HTTP 요청을
+보내는 웹 클라이언트의 역할을 수행
+ 웹 브라우저 요청에 대한 웹 서버의 응답
+다양한 웹클라이언트
+5리눅스 Curl 명령을 사용하여 요청
+ 리눅스 curl 명령은 HTTP/HTTPS/FTP HTTP/HTTPS/FTP HTTP/HTTPS/FTP HTTP/HTTPS/FTP HTTP/HTTPS/FTP HTTP/HTTPS/FTP HTTP/HTTPS/FTP 등 여러 가지의 프로토콜을 사용 하여 데이터를 송수신할 수 있는 명령
+ curl curl 명령 요청에 대한 웹 서버의 응답 다양한 웹클라이언트
+6Telnet 을 사용하여 요청
+ 리눅스의 telnet telnet telnet 프로그램을 사용하여 HTTP HTTP 요청을 보낼 수도 있음
+ telnet telnet telnet 명령은 터미널 창에서 입력하는 내용을 그대로 웹 서버에 전송 다양한 웹클라이언트
+7Telnet 을 사용하여 요청
+ telnet telnet telnet 프로그램이 웹 클라이언트의 역할을 수행
+ 응답 메시지를 수신한 후,
+telnet telnet telnet 프로그램을 종료하기
+위해 마지막 두 라인을 입력 다양한 웹클라이언트
+8직접 만든 클라이언트로 요청
+ 직접 만든 클라이언트 요청에 대한 웹 서버의 응답
+ 웹 클라이언트의 형태는 달라도 동일한 요청에 대해서 동일한 응답을 받 는 것을 확인 다양한 웹클라이언트
+9HTTP 메지시의 구조
+ 스타트라인은 요청 메시지일 때 요청라인 request linerequest line request linerequest line request line이라고 하고 ,
+ 응답 메시지일 때 상태라인 status line status line status line status line이라고 함 HTTP HTTP HTTP HTTP HTTP 프로토콜
+10 HTTP 메지시의 구조
+ 요청라인으로 , 요청 방식 method, method, method, method, 요청 URL, URL, URL, 프로토콜 버전으로 구성 HTTP HTTP HTTP HTTP HTTP 프로토콜
+11 HTTP 처리방식
+ HTTP HTTP 메소드 종류
+ GET GET 방식은 지정한 URL 의 정보를 가져오는 메소드로 , 가장 많이 사용
+ POST POST 의 대표적인 기능은 리소스를 생성하는 것으로 , 블로그에 글을 등록 하는 경우가 이에 해당
+ PUT 은 리소스를 변경하는 데 사용 HTTP HTTP HTTP HTTP HTTP 프로토콜
+12 GET 과 POST POST 메소드
+ 현실적으로 가장 많이 사용하는 메소드는 GET GET과 POST 2 POST 2 POST 2가지
+ 파이썬의 장고 프레임워크에서도 폼의 데이터는 POST POST 방식만을 사용하 고 있음 HTTP HTTP HTTP HTTP HTTP 프로토콜
+13 상태코드
+ 서버에서의 처리 결과는 응답 메시지의 상태라인에 있는 상태 코드 Status Status Status code code 를 보고 파악할 수 있음 HTTP HTTP HTTP HTTP HTTP 프로토콜
+14 상태코드
+ 자주 사용되는 상태 코드 HTTP HTTP HTTP HTTP HTTP 프로토콜
+15 상태코드
+ 자주 사용되는 상태 코드 HTTP HTTP HTTP HTTP HTTP 프로토콜
+16 URL 구성 항목
+ URL URL 구성 항목
+• URL URL 스킴 : URL : URL: URL 에 사용된 프로토콜을 의미 .
+• 호스트명 : 웹 서버의 호스트명으로 , 도메인명 또는 IP 주소로 표현 .
+• 포트번호 : 웹 서버 내의 서비스 포트번호 . 생략 시에는 디폴트 포트번호로 , http , http 는 80 을, https 는 443 을 사용
+• 경로 : 파일이나 애플리케이션 경로를 의미
+• 쿼리스트링 : 질의 문자열로 , 앰퍼샌드 (&) 로 구분된 이름 =값 쌍 형식으로 표현
+• 프라그먼트 : 문서 내의 앵커 등 조각을 지정 URL URL URL URL 설계
+17 URL 구성 항목
+ URLURL 은 웹 클라이언트에서 호출한다는 시점에서 보면
+ 웹 서버에 존재하는 애플리케이션에 대한 API(Application Programming API(Application Programming API(Application Programming API(Application Programming API(Application Programming Interface) Interface) Interface) 라고 할 수 있음
+ URLURL 을 바라보는 또 한 가지 측면은 REST REST REST 방식으로 URLURL 을 설계하는 것.
+ REST REST REST 방식이란 웹 서버에 존재하는 요소들을 모두 리소스라고 정의하고 , URLURL 을 통해 웹 서버의 특정 리소스를 표현한다는 개념
+URL URL URL URL 설계
+18 간편 URL
+ 간편 URL URL은 쿼리스트링 없이 경로만 가진 간단한 구조의 URL URL을 말함 .
+ 검색 엔진 의 처리를 최적화하기 위해 생겨난 간편한 URL 은 URL 을 입력 하거나 기억하기 쉽다는 부수적인 장점도 있어 , 검색 엔진 친화적 URLsearch URLsearchURLsearch engine friendly engine friendly engine friendly engine friendly engine friendly engine friendly engine friendly engine friendly engine friendly url url또는 사용자 친화적 URLuser URLuserURLuser friendly friendly friendly friendly friendly url url이라고 부르기도 함
+URL URL URL URL 설계
+19 파이썬의 URL
+ URL URL을 정의하 기 위해 정규표현식 Regular ExpressionRegular Expression Regular Expression Regular Expression Regular Expression Regular Expression Regular Expression을 추가적으로 사 용할 수 있음 . . URL URL URL URL 설계
+20 웹 애플리케이션 서버
+ 웹 서버 및 웹 애플리케이션 서버라는 용어는 SW 측면의 서버 프로그램 을 의미 웹 애플리케이션 서버
+21 웹 애플리케이션 서버
+ 기술의 발전에 따른 웹 서버 기술의 변화 웹 애플리케이션 서버
+22 정적 페이지 vs vs 동적 페이지
+ 정적 static, static, 동적 dynamic 이란 용어는 사용자가 페이지를 요청하는 시점 에 페이지의 내용이 유지되는가 또는 변경되는가를 구분해주는 용어 .
+ 동적 페이지에는 프로그래밍 코드가 포함되어 있어서 페이지 요청 시점 에 HTML HTML 문장을 만들어내는 것 웹 애플리케이션 서버
+23 전통적인 CGI CGI 방식의 요청 처리
+ CGI CGI 방식의 근본적인 문제점은 각각의 클라이언트 요청에 대하여 독립적 인 별도의 프로세스가 생성
+ 요청이 많아질수록 프로세스가 많아지고 , 프로세스가 많아질수록 비례적 으로 프로세스가 점유하는 메모리 요구량도 커져서 시스템에 많은 부하 를 주는 요인 웹 애플리케이션 서버
+24 CGI CGI 방식의 대안 기술
+ CGI CGI 방식의 대안 기술 중 하나는 별도의 애플리케이션 (CGI (CGI 프로그램과 같은 역할을 하는 프로그램 프로그램 )을 Perl, PHP Perl, PHP Perl, PHP Perl, PHP Perl, PHP 등의 스크립트 스크립트 언어로 작성하고 ,
+ 스크립트를 처리하는 스크립트 엔진 (인터프리터 )을 웹 서버에 내장시켜 서 CGI CGI CGI 방식의 단점이었던 별도의 프로세스를 기동시키는 오버헤드를 줄 이는 방식 웹 애플리케이션 서버
+25 애플리케이션 서버 방식
+ 웹 서버와 웹 애플리케이션 서버가 분리됨에 따라 , 서로의 역할도 구분하 여 사용하는 것이 좋음 .
+ 정적 페이지를 처리하는 경우에 비해서 동적 페이지를 처리하는 경우가 수 배에서 수십 배의 메모리를 소비하기 때문 . 웹 애플리케이션 서버
+26 애플리케이션 서버 방식
+ 애플리케이션 서버 방식에서의 서버 간 구성도 . 웹 애플리케이션 서버
+27 웹 서버와의 역할 구분
+ 서버와 애플리케이션 서버의 역할과 HW 배치
+ 웹 서버와 웹 애플리케이션 서버 프로그램이 함께 필요하며 , 이 두 개의 서버 를 동일한 HW 박스에서 기동시키는 것도 충분히 가능한 구성 .
+ 서비스 운용 관리 측면에서 하나의 HW 박스에 구성하는 것이 좀 더 간편한 방식이기 때문 웹 애플리케이션 서버
+28 웹 서버와의 역할 구분
+ 서버와 애플리케이션 서버의 역할과 HW 배치
+ 웹 서버와 웹 애플리케이션 서버 프로그램이 함께 필요하며 , 이 두 개의 서버 를 동일한 HW 박스에서 기동시키는 것도 충분히 가능한 구성 .
+ 서비스 운용 관리 측면에서 하나의 HW 박스에 구성하는 것이 좀 더 간편한 방식이기 때문 웹 애플리케이션 서버
+29 웹 라이브러리 구성
+ urllib urllib 패키지에는 웹 클라이언트를 작성하는 데 사용되는 모듈들이 있으 며, 가장 빈번하게 사용하는 모듈
+ http http 패키지는 크게 서버용과 클라이언트용 라이브러리로 나누어 모듈을 담고 있음
+ 쿠키 관련 라이브러리도 http http 패키지 내에서 서버용과 클라이언트용으 로 모듈이 구분 웹 라이브러리 구성
+30 웹 라이브러리 구성
+ 웹 라이브러리 구성 웹 라이브러리 구성
+31 웹 라이브러리 구성
+ 파이썬 3.x 에서 표준 라이브러리의 모듈 구성 사항 웹 라이브러리 구성
+32 웹 라이브러리 구성
+ 사용웹 클라이언트를 위한 파이썬 표준 라이브러리가 있지만 , 실제 프로 젝트에서는 외부 라이브러리인 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 requests, beautifulsoup4 등을 더 많이 사용하는 편임
+ 좀 더 간편하고 이해하기 쉬운 문법을 제공하기 때문
+ Python Shell Python Shell Python Shell Python Shell Python Shell 실행 파이썬 언어는 2가지 실행 방법을 제공
+• python python 명령어로 파이썬 스크립트 파일 즉, *. , *. py 파일을 실행하는 방법 (> python (> python (> python example.py). example.py). example.py). example.py).
+• 파이썬 쉘 모드에서 라인 단위로 실행하는 것. 파이썬 쉘 모드로 진입하려면 python python 명 령어만 입력 (>python (>python (>python 웹 라이브러리 구성
+33 Urllib.parse Urllib.parse Urllib.parse 모듈
+ scheme : URL scheme : URL scheme : URL scheme : URL scheme : URL scheme : URL에 사용된 프로토콜을 의미
+ netloc netloc : 네트워크 위치 . user : . user :. user : . user :. user :password@hostpassword@host password@hostpassword@hostpassword@host password@host :port :port :port :port 형식으로 표현되며 , HTTP HTTP 프로토콜인 경우는 host:port host:port host:port형식 .
+ path : path : path : 파일이나 애플리케이션 경로를 의미 .
+ params : params : params : params : 애플리케이션에 전달될 매개변수입니다 . 현재는 사용하지 않음 .
+ query : query : query : query : query : 질의 문자열 또는 매개변수로 , 앰퍼샌드 (&) 로 구분된 이름 =값 쌍 형식으로 표현 .
+ fragment : fragment : fragment : 문서 내의 앵커 등 조각을 지정 .웹 클라이언트 라이브러리
+34 urllib.parse urllib.parse urllib.parse urllib.parse 모듈
+ urllib urllib urllib
+• url url인자로 지정한 URLURL 로 연결하고 , 유사 파일 객체를 반환 .
+• url 인자는 문자열이거나 , Request , Request , Request , Request 클래스의 인스턴스가 올 수 있음 .
+• url 에 file 스킴을 지정하면 로컬 파일을 열 수 있음 .
+• 디폴트 요청 방식은 GET GET이고 , 웹 서버에 전달할 파라미터가 있으면 질의 문자열을 url 인자에 포함해서 보냄 .
+• 요청 방식을 POST 로 보내고 싶으면 data 인자에 질의 문자열을 지정해주면 됨.
+• 옵션인 timeout timeout 은 응답을 기다리는 타임아웃 시간을 초로 표시 웹 클라이언트 라이브러리
+35 http.client http.client http.client 모듈
+ http.client http.client http.client모듈 사용 시 코딩 순서
+ GET, POST GET, POST GET, POST GET, POST GET, POST 이외의 방식으로 요청을 보내거나 , 요청 헤더와 바디 사이에 타이머를 두어 시간을 지연시키는 등 urllib.requesturllib.request urllib.request urllib.requesturllib.request urllib.request urllib.request 모듈로는 쉽게 처리 할 수 없는 경우 혹은 HTTP HTTP 프로토콜 요청에 대한 저수준의 더 세밀한 기 능이 필요할 때는 http.client http.client http.client 모듈을 사용함 웹 클라이언트 라이브러리
+36 간단한 웹 서버
+ 웹 서버 라이브러리 웹 서버라이브러리
+37 HTTP Server HTTP Server HTTP Server HTTP Server 및 BaseHTTP BaseHTTP RequestHandler RequestHandler RequestHandler RequestHandler 클래스
+ 원하는 웹 서버를 만들기 위해서는 기반 클래스를 임포트하거나 상 속받 아야 함.
+ 이처럼 기반이 되는 클래스가 바로 HTTPServer HTTPServer HTTPServerHTTPServerHTTPServer 및 BaseHTTPRequestHandler BaseHTTPRequestHandler BaseHTTPRequestHandler BaseHTTPRequestHandler BaseHTTPRequestHandler BaseHTTPRequestHandler BaseHTTPRequestHandler 클래스
+ Python my_httpserver.py Python my_httpserver.pyPython my_httpserver.py Python my_httpserver.py Python my_httpserver.py Python my_httpserver.py Python my_httpserver.pyPython my_httpserver.py Python my_httpserver.py 웹 서버라이브러리
+38 SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler
+ Simple Simple 웹 서버 실행 화면
+ Python Python Python –m http.server http.server http.server http.serverhttp.server 8888
+ 디렉토리 리스트가 나오는 것은 SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandlerSimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandlerSimpleHTTPRequestHandlerSimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler의 do_GET do_GET() 메소드가 디렉토리 리스트를 반환하도록 구현 웹 서버라이브러리
+39 CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler 클래스
+ SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler클래스와 유사하게 CGIHTTPRequestHandlerCGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandlerCGIHTTPRequestHandler CGIHTTPRequestHandlerCGIHTTPRequestHandler CGIHTTPRequestHandler 클래스가 미리 구현되어 있어서 필요할 때 즉 시 웹 서버를 실행할 수 있음
+ CGIHTTPRequestHandlerCGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandlerCGIHTTPRequestHandler CGIHTTPRequestHandlerCGIHTTPRequestHandlerCGIHTTPRequestHandler 클래스에는 do_POST do_POST() () 메소드가 정의되어 있어서 POST POST 방식을 처리할 수 있음
+ SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler SimpleHTTPRequestHandler클래스를 상속받고 있어서 , GET , GET , GET 및 HEAD HEAD HEAD 방식도 처리 웹 서버라이브러리
+40 CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler CGIHTTPRequestHandler 클래스
+ CGI CGI 웹 서버 실행
+ python pythonpython–mhttp.server http.server http.server http.serverhttp.server 8888 -cgi 웹 서버라이브러리
+41 CGI CGI 관련 모듈
+ 웹 서버가 사용자의 요청을 애플리케이션에 전달하고 애플리케이션의 처 리 결과를 애플 리케이션으로부터 되돌려받기 위한 , 즉 웹 서버와 애플리 케이션 간에 데이터를 주고받기 위한 규격을 CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway CGI(Common Gateway Interface) Interface)Interface) Interface) 라고 함 CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI 라이브러리
+42 WSGI 개요
+ CGI CGI 방식은 요청이 들어올 때마다 처리를 위한 프로세스가 생성되는 방 식이라 서, 짧은 시간에 수천 , 수만의 다량 요청을 받으면 서버의 부하가 높아져서 프로세스가 멈추거나 다운될 수도 있음
+ 이러한 CGICGICGI의 단점을 해결하고 , 파이썬 언어로 애플리케이션을 좀 더 쉽 게 작성할 수 있도록 웹 서버와 웹 애플리케이션 간에 연동 규격을 정의 한 것이 WSGI WSGI WSGI 규격 CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI 라이브러리
+43 WSGI 서버의 애플리케이션 처리 과정
+ WSGI WSGI 애플리케이션의 처리 순서 CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI 라이브러리
+44 wsgiref.simple_server wsgiref.simple_server wsgiref.simple_server 모듈
+ 이 모듈은 WSGI WSGI 스펙을 준수하는 웹 서버 (일명 , WSGI , WSGI , WSGI 서버 )에 대한 참조 reference reference reference reference 서버 , 즉 개발자에게 참고가 될 수 있도록 미리 만들어 놓은 WSGIServer WSGIServer WSGIServer WSGIServerWSGIServerWSGIServer 클래스와 WSGIRequestHandlerWSGIRequestHandlerWSGIRequestHandlerWSGIRequestHandler WSGIRequestHandler WSGIRequestHandlerWSGIRequestHandler WSGIRequestHandler WSGIRequestHandlerWSGIRequestHandlerWSGIRequestHandler 클래스를 정의 .
+ 장고의 runserver runserverrunserver runserverrunserver 도 이들 클래스를 사용하여 만든 테스트용 웹 서버
+ python my_wsgiserver.py python my_wsgiserver.pypython my_wsgiserver.py python my_wsgiserver.py python my_wsgiserver.py python my_wsgiserver.py python my_wsgiserver.pypython my_wsgiserver.py python my_wsgiserver.py CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI CGI/WSGI 라이브러리
+45 정리
+ 웹프로그램의 이해
+ 다양한 웹 클라언트
+ 웹 클라이언트 라이브러리
+ 웹 서버 라이브러리
+ CGICGI /WSGI /WSGI 라이브러리 정리
